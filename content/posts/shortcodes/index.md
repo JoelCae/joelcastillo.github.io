@@ -8,7 +8,7 @@ menu:
     identifier: shortcodes
     weight: 40
 hero: boat.jpg
-mermaid: false
+mermaid: true
 ---
 
 This is a sample post intended to test the followings:
