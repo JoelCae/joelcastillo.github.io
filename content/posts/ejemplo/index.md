@@ -9,6 +9,7 @@ menu:
     weight: 50
 tags: ["Basic", "Multi-lingual"]
 categories: ["Basic"]
+enable: true
 ---
 
 ## R Markdown
