@@ -1,11 +1,10 @@
 # section information
 section:
   name: Skills
-  id: skills
+  id: projects
   enable: true
-  weight: 2
+  weight: 6
   showOnNavbar: true
-  filter: true
   # Can optionally hide the title in sections
   # hideTitle: true
 
@@ -13,59 +12,68 @@ section:
 buttons:
 - name: All
   filter: "all"
-- name: Basic
-  filter: "basic"
-- name: Language
-  filter: "language"
-- name: Container
-  filter: "container"
-- name: Others
-  filter: "others"
+- name: Economic analysis
+  filter: "economics"
+- name: Programming
+  filter: "programming"
+
 
 # Your Skills.
 # Give a summary of you each skill in the summary section.
-skills:
-- name: Kubernetes
-  logo: /images/sections/skills/kubernetes.png
-  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
-  categories: ["container"]
-  url: "https://kubernetes.io/"
+projects:
+- name: R
+  logo: /images/sections/skills/Rlogo.png
+  summary: "Experienced in R for statistical analysis, data visualization, and data manipulation. Skilled in using R packages like dplyr, ggplot2, and tidyr for data manipulation and creating graphics."
+  url: "https://www.r-project.org"
+  tags: ["software", "programming"]
 
-- name: Go Development
-  logo: /images/sections/skills/go.png
-  summary: "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
-  categories: ["basic", "language"]
-  url: "https://golang.org/"
+- name: STATA
+  logo: /images/sections/skills/STATAlogo.png
+  summary: "Proficient in Stata, with experience in managing large datasets, performing statistical analyses (including regression, time-series, and panel data), and creating customized visualizations."
+  url: "https://www.stata.com"
+  tags: ["software", "programming"]
 
-- name: Cloud Computing
+#- name: Python
+ # logo: /images/sections/skills/cloud.png
+ # summary: "Experienced in Python, specializing in data analysis, automation, and machine learning. Proficient in using libraries like Pandas, NumPy, and Matplotlib for data manipulation and visualization, as well as Scikit-learn and TensorFlow for developing predictive models. Skilled in writing efficient scripts for automating workflows and ensuring reproducibility in research."
+  #url: "https://www.python.org"
+  #tags: ["software", "programming"]
+
+#- name: EViews
+ # logo: /images/sections/skills/cloud.png
+  #summary: ""
+  #url: "https://www.eviews.com/home.html"
+  #tags: ["software", "programming"]
+
+- name: LaTex
+  logo: /images/sections/skills/overleaflogo.png
+  summary: "Proficient in LaTeX for creating professionally formatted documents, including academic papers, reports, and presentations. Skilled in using LaTeX for complex mathematical typesetting, bibliography management, and document customization."
+  tags: ["software", "programming"]
+
+- name: MS Office
+  logo: /images/sections/skills/MSlogo.png
+  summary: "Proficient in Microsoft Office, with advanced skills in Excel for data analysis, modeling, and automation using functions. Experienced in creating professional documents in Word. Skilled in designing presentations in PowerPoint."
+  tags: ["software"]
+
+- name: Applied Economics
   logo: /images/sections/skills/cloud.png
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
-  categories: ["others"]
+  summary: "Skilled in applied economics, with a strong background in using economic theories and quantitative methods to analyze real-world issues. Experienced in interpreting economic data and applying econometric techniques to inform decision-making and solve practical economic problems."
+  tags: ["economics"]
 
-- name: Docker
-  logo: /images/sections/skills/docker.svg
-  summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
-  categories: ["container"]
-  url: "https://www.docker.com/"
+- name: Data Analysis
+  logo: /images/sections/skills/cloud.png
+  summary: "Experienced in data analysis, with strong skills in cleaning, transforming, and interpreting complex datasets. Proficient in using statistical methods and tools to extract meaningful insights, identify trends, and support data-driven decision-making. Capable of visualizing data effectively to communicate findings clearly."
+  tags: ["data", "economics"]
 
-- name: Prometheus
-  logo: /images/sections/skills/prometheus.png
-  summary: "Capable of setup, configure Prometheus metrics. Experienced with PromQL, AlertManager. Also, experienced with writing metric exporters."
-  categories: ["basic"]
-  url: "https://prometheus.io/"
+#- name: GiHub
+ # logo: /images/sections/skills/cloud.png
+  #summary: ""
+ #tags: ["programming language", "kubernetes", "cloud"]
 
-- name: Linux
-  logo: /images/sections/skills/linux.png
-  summary: "Using as the main operating system. Capable of writing bash/shell scripts."
-  categories: ["others"]
+#- name: Docker
+ # logo: /images/sections/skills/docker.svg
+  #summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
+  #url: "https://www.docker.com/"
 
-- name: Git
-  logo: /images/sections/skills/git.png
-  summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
-  categories: ["basic"]
-  url: "https://git-scm.com/"
 
-- name: C++
-  logo: /images/sections/skills/c++.png
-  summary: "Know basic C/C++ programming. Used for contest programming and problem solving."
-  categories: ["basic", "language"]
+
