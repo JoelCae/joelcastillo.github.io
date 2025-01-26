@@ -40,3 +40,14 @@ publications:
     url: "https://diego-lopezt.shinyapps.io/Poblacion_Economia/" 
   categories: ["academic"]
   tags: ["R Programming", "Data", "Visualitation","Shiny app"]
+
+  paper:
+    summary: In this thesis, I analize the effect of NATFTA on the agricultural sector of Mexico. In specific, I focus in the affect on foreig trade (exports and inports) and productivitie for the sector in general and for some specifict products. 
+          To estimate the effect, I apply the Synthetic Control Method (Abadie, 2003).
+    url: "https://repositorio.colmex.mx/concern/theses/2801pj26n?f%5Bcreator_sim%5D%5B%5D=Castillo+Espinosa%2C+Joel&f%5Blanguage_sim%5D%5B%5D=Español&f%5Bsubject_sim%5D%5B%5D=Libre+comercio&f%5Btype_of_illustrations_sim%5D%5B%5D=gráficas&locale=es"
+  categories: ["academic"]
+  tags: ["Econometrics"]
+
+
+
+  
