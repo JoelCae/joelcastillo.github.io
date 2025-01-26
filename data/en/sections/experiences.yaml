@@ -3,7 +3,7 @@ section:
   name: Experiences
   id: experiences
   enable: true
-  weight: 3
+  weight: 2
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true 
@@ -11,63 +11,56 @@ section:
 # Your experiences
 experiences:
 - company:
-    name: Example Co.
-    url: "https://www.example.com"
-    location: Dhaka Branch
-    logo: /images/sections/experiences/company1.jpg
+    name: Banco de México (BANXICO).
+    url: "https://www.banxico.org.mx"
+    location: Mexico City
+    logo: /images/sections/experiences/banxico_blue.png
     # Can optionally show a different logo for dark theme
-    # darkLogo: /images/sections/experiences/company1.jpg
+    darkLogo: /images/sections/experiences/banxico_white.png
     # company overview
-    overview: Example Co. is a widely recognized company for cloud-native development. It builds tools for Kubernetes.
+    overview: Banxico is the Central Bank of Mexico. The main objective of Banxico is to maintain a low and stable inflation.
   positions:
-  - designation: Senior Software Engineer
-    start: Nov 2019
+  - designation: Economist
+    start: Sept 2022
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Design and develop XYZ tool for ABC task
-    - Design, develop and manage disaster recovery tool [Xtool](https://www.example.com) that backup Kubernetes volumes, databases, and cluster's resource definition.
-    - Lead backend team.
-
-  - designation: Junior Software Engineer
-    start: Nov 2017
-    end: Oct 2019
-    responsibilities:
-    - Implement and test xyz feature for abc tool.
-    - Support client for abc tool.
-    - Learn k,d,w technology for xyz.
-
+    - Team member in the Banxico's Survey of Expectations of Private Sector Economic Specialists ([Link to the Survey](https://www.banxico.org.mx/publicaciones-y-prensa/encuestas-sobre-las-expectativas-de-los-especialis/encuestas-expectativas-del-se.html)).
+    - "Research and assitance for working papers in different economic topics: inflation, expecatations, and climate change."
+    - Analysis and report of relevant economic variables that help to make the Central Bank’s Monetary Policy.
+    
 - company:
-    name: PreExample Co.
-    url: "https://www.example.com"
-    location: Nowhere
-    logo: /images/sections/experiences/company2.jpg
+    name: Servicio de Administracion Tribuataria (SAT).
+    url: "https://www.sat.gob.mx/home"
+    location: Mexico City
+    logo: /images/sections/experiences/sat_blue.png
     # Can optionally show a different logo for dark theme
-    # darkLogo: /images/sections/experiences/company2.jpg
-    overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
+    darkLogo: /images/sections/experiences/sat_white.png
+    overview: SAT is the federal organization that is the resposible to apply the fiscal regulation in Mexico. 
   positions:
-  - designation: Software Engineer
-    start: March 2016
-    end: May 2017
+  - designation: Head of Department
+    start: Oct 2021
+    end: Aug 2022
     responsibilities:
-    - Write lots of example codes.
-    - Read lots of examples.
-    - See lots of example videos.
+    - Designed and actualized of services for the taxpayers. Developed a new method for the assign of Fiscal Obligation to the taxpayers.
+    - Assisted as specialist in regulation of Fiscal Obligations for the internal areas.
 
-- company:
-    name: Intern Counting Company (ICC).
-    url: "https://www.example.com"
-    location: Intern Land
-    logo: /images/sections/experiences/company3.jpg
+#- company:
+ #   name: Intern Counting Company (ICC).
+  #  url: "https://www.example.com"
+   # location: Intern Land
+    #logo: /images/sections/experiences/company3.jpg
     # Can optionally show a different logo for dark theme
     # darkLogo: /images/sections/experiences/company3.jpg
-    overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
-  positions:
-  - designation: Intern
-    start: Jun 2015
-    end: Jan 2016
-    responsibilities:
-    - Count lost of interns.
-    - Count more interns.
-    - Count me as an intern.
+    #overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
+  #positions:
+  #- designation: Intern
+   # start: Jun 2015
+   
+    #end: Jan 2016
+   # responsibilities:
+    #- Count lost of interns.
+    #- Count more interns.
+    #- Count me as an intern.
+
