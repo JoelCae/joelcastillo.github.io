@@ -1,6 +1,6 @@
 baseURL: https://hugo-toha.github.io
 
-languageCode: bn
+languageCode: en
 title: "Joel Castillo"
 
 # Use Hugo modules to add theme
