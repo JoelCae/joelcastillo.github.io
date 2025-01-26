@@ -6,7 +6,7 @@ menu:
   sidebar:
     name: Shortcodes Sample
     identifier: shortcodes
-    weight: 40
+    weight: 
 hero: boat.jpg
 mermaid: true
 ---
