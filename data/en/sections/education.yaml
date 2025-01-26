@@ -4,101 +4,115 @@ section:
   id: education
   template: sections/education.html # Use "sections/education-alt.html for alternate template.
   enable: true
-  weight: 4
+  weight: 3
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true
 
 degrees:
-- name: Ph.D in Quantum Cryptography
-  icon: fa-microscope
-  timeframe: 2016-2020
-  institution:
-    name: ABC University of Technology
-    url: "#"
-    logo: /images/sections/education/tech_college.png
-    # Can optionally show a different logo for dark theme
-    # darkLogo: /images/sections/education/tech_college.png
-  grade: #(optional)
-    scale: CGPA
-    achieved: 3.6
-    outOf: 4
-  publications: #(optional)
-  - title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    url: "#"
-  - title: Fusce eu augue ut odio porttitor pulvinar.
-    url: "#"
-  - title: Nullam vitae orci tincidunt purus viverra pulvinar.
-    url: "#"
-- name: B.Sc. in Computer Science & Engineering
+- name: Master in Economics
   icon: fa-graduation-cap
-  timeframe: 2012-2016
+  timeframe: 2019-2021
   institution:
-    name: University of XYZ
-    url: "#"
-    logo: /images/sections/education/university.jpg
+    name: El Colegio de México
+    #ejempo de texto
+    url: "https://cee.colmex.mx/maestria/economia/introduccion"
+    logo: /images/sections/education/colmex_winered.png
     # Can optionally show a different logo for dark theme
-    # darkLogo: /images/sections/education/university.jpg
-  grade: #(optional)
-    scale: CGPA
-    achieved: 3.5
-    outOf: 4
-  takenCourses: #(optional)
-    # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
-    showGrades: true
-    collapseAfter: 3
-    courses:
-    - name: Data Structures and Algorithm
-      achieved: 3.75
-      outOf: 4
-    - name: Network Security
-      achieved: 3.80
-      outOf: 4
-    - name: Operating System
-      achieved: 3.5
-      outOf: 4
-    - name: Artificial Intelligent
-      achieved: 3.75
-      outOf: 4
+    #darkLogo: /images/sections/education/colmex_white.png
+  #grade: #(optional)
+   # scale: CGPA
+   # achieved: 3.6
+    #outOf: 4
   publications: #(optional)
-  - title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    url: "#"
-  - title: Fusce eu augue ut odio porttitor pulvinar.
-    url: "#"
-  extracurricularActivities: #(optional)
-  - In vitae facilisis est, eget porta sem.
-  - Vestibulum consectetur lorem justo, at laoreet lorem feugiat et.
-  - Duis sed massa feugiat, ornare justo et, aliquam est.
-  - Pellentesque ut fringilla magna.
-  custonSections: #(optional)
-    - name: Thesis
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - name: Supervisor
-      content: Fusce eu augue ut odio porttitor pulvinar.
-- name: Higher Secondary School Certificate
-  icon: fa-university
-  timeframe: 2010-2012
+  - title: "Thesis: Efectos del TLCAN en el sector agrícola de México." 
+    url: "https://repositorio.colmex.mx/concern/theses/2801pj26n?f%5Bcreator_sim%5D%5B%5D=Castillo+Espinosa%2C+Joel&f%5Blanguage_sim%5D%5B%5D=Español&f%5Bsubject_sim%5D%5B%5D=Libre+comercio&f%5Btype_of_illustrations_sim%5D%5B%5D=gráficas&locale=es"
+  
+  - title: "Advisor: Ph.D. Laura Juarez" 
+    
+    
+    
+    
+- name: Bachelor in International Trade
+  icon: fa-graduation-cap
+  timeframe: 2013-2018
   institution:
-    name: MST College of Science
-    url: "#"
-    logo: /images/sections/education/science_college.png
+    name: Universidad Autónoma Chapingo
+    url: "https://dicea.chapingo.mx/oferta-educativa/lci/lci-info-gen/"
+    logo: /images/sections/education/chapingo_blue.png
+    # Can optionally show a different logo for dark theme
+    darkLogo: /images/sections/education/chapingo_white.png
+  #custonSections: #(optional)
+   # - name: Thesis
+    #  content: ejemplo
+    #- name: jc
+     # content: ejemplo
+  #grade: #(optional)
+   # scale: CGPA
+    #achieved: 3.5
+    #outOf: 4
+ # takenCourses: #(optional)
+    # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+  #  showGrades: true
+   # collapseAfter: 3
+    #courses:
+   # - name: Data Structures and Algorithm
+    #  achieved: 3.75
+     # outOf: 4
+    #- name: Network Security
+     # achieved: 3.80
+    #  outOf: 4
+    #- name: Operating System
+    #  achieved: 3.5
+    #  outOf: 4
+    #- name: Artificial Intelligent
+      #achieved: 3.75
+      #outOf: 4
+  publications: #(optional)
+  - title: "Thesis: Análisis del mercado interno y Comercio Exterior de la carne porcina en México."
+    url: "http://biblioteca.dicea.chapingo.mx/cgi-bin/koha/opac-detail.pl?biblionumber=14157"
+    
+  - title: "With M.Sc. Karina Dominguez. Advisor: Ph.D. Samuel Banda."
+
+  #- title: "Presentation: Oportunidades de mercado de las flores mexicanas en Rusia"
+    #url: "#"
+    
+  #- title: "With M.Sc. Karina Dominguez. Russian Foreign Trade Academy"
+    
+  #- title: Fusce eu augue ut odio porttitor pulvinar.
+   # url: "#"
+  #extracurricularActivities: #(optional)
+  #- In vitae facilisis est, eget porta sem.
+  #- Vestibulum consectetur lorem justo, at laoreet lorem feugiat et.
+  #- Duis sed massa feugiat, ornare justo et, aliquam est.
+  #- Pellentesque ut fringilla magna.
+
+      
+#- name: Higher Secondary School Certificate
+ # icon: fa-university
+  #timeframe: 2010-2012
+  #institution:
+   # name: MST College of Science
+    #url: "#"
+    #logo: /images/sections/education/science_college.png
     # Can optionally show a different logo for dark theme
     # darkLogo: /images/sections/education/science_college.png
-  grade: #(optional)
-    scale: GPA
-    achieved: 5
-    outOf: 5
-  extracurricularActivities: #(optional)
-  - In vitae facilisis est, eget porta sem.
-  - Vestibulum consectetur lorem justo, at laoreet lorem feugiat et.
-  - Duis sed massa feugiat, ornare justo et, aliquam est.
-  - Pellentesque ut fringilla magna.
-- name: Secondary School Certificate
-  icon: fa-school
-  timeframe: 2005-2010
-  institution:
-    name: JK School of Science
-  grade: #(optional)
-    scale: GPA
-    achieved: 4.5
-    outOf: 5
+  #grade: #(optional)
+   # scale: GPA
+   # achieved: 5
+    #outOf: 5
+ # extracurricularActivities: #(optional)
+ # - In vitae facilisis est, eget porta sem.
+  #- Vestibulum consectetur lorem justo, at laoreet lorem feugiat et.
+  #- Duis sed massa feugiat, ornare justo et, aliquam est.
+  #- Pellentesque ut fringilla magna.
+#- name: Secondary School Certificate
+#  icon: fa-school
+  #timeframe: 2005-2010
+  #institution:
+    #name: JK School of Science
+  #grade: #(optional)
+    #scale: GPA
+    #achieved: 4.5
+   # outOf: 5
+
