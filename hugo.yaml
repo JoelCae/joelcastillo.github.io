@@ -25,11 +25,11 @@ languages:
     languageName: English
     title: "Joel Castillo"
     weight: 1
-  bn:
-    languageCode: bn
-    languageName: বাংলা
-    title: জনের ব্লগ
-    weight: 2
+  #bn:
+    #languageCode: bn
+    #languageName: বাংলা
+    #title: জনের ব্লগ
+    #weight: 2
 # default language for the content
 defaultContentLanguage: en
 
