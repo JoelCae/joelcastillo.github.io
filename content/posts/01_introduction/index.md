@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-date: 
+date: 2025-01-25
 description: Introduction to posts
 menu:
   sidebar:
@@ -17,5 +17,5 @@ In this first seccion, I present a general outline of the content. If you want r
 
 Feel free to explore all the content. If you have any question or contribution, I will be greatful to recive your messange (you can see my contact details [here](https://joelcastillo.netlify.app/#about) or in the footer of this website). 
 
-# General index 
+## General index 
 -  Leetcode 75: 75 coding problem set from Leetcode
