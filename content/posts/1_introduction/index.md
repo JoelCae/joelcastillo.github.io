@@ -18,4 +18,4 @@ In this first seccion, I present a general outline of the content. If you want r
 Feel free to explore all the content. If you have any question or contribution, I will be greatful to recive your messange (you can see my contact details [here](https://joelcastillo.netlify.app/#about) or in the footer of this website). 
 
 INDEX
-- [link](https://github.com/JoelCae/joelcastillo.github.io/edit/main/content/posts/1_introduction/01_1768_Merge_Strings_Alternately.html)
+- [link]([https://https://joelcastillo.netlify.app/posts/1_introduction/01_1768_Merge_Strings_Alternately.html)
