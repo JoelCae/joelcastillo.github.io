@@ -17,4 +17,5 @@ In this first seccion, I present a general outline of the content. If you want r
 
 Feel free to explore all the content. If you have any question or contribution, I will be greatful to recive your messange (you can see my contact details [here](https://joelcastillo.netlify.app/#about) or in the footer of this website). 
 
-# Coming soon...
+INDEX 
+- [Link Text](https://github.com/JoelCae/JoelCae/blob/main/01_1768-Merge-Strings-Alternately.html)
