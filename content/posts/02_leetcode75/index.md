@@ -1,6 +1,6 @@
 ---
 title: "LeetCode 75"
-[comment]: date: 
+[comment]: "date:"
 description: LeetCode 75
 menu:
   sidebar:
