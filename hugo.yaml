@@ -1,7 +1,7 @@
 baseURL: https://joelcastillo.netlify.app
 
 languageCode: en
-title: "Joel Castillo"
+title: "Joel Castillo Espinosa"
 
 # Use Hugo modules to add theme
 module:
@@ -23,7 +23,7 @@ languages:
   en:
     languageCode: en
     languageName: English
-    title: "Joel Castillo"
+    title: "Joel Castillo Espinosa"
     weight: 1
   #bn:
     #languageCode: bn
