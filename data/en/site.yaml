@@ -22,8 +22,8 @@ customMenus:
 
 # Specify OpenGraph Headers
 openGraph:
-  title: Joel Castillo
+  title: Joel Castillo Espinosa
   type: website
   description: Portfolio and personal blog of Joel Castillo Espinosa.
   image: images/author/Joel_profile.png
-  url: https://hugo-toha.github.io
+  url: https://joelcastillo.netlify.app
