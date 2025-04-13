@@ -28,22 +28,22 @@ publications:
     name: Link to Shiny app
     date: 2020
     url: "https://diego-lopezt.shinyapps.io/Poblacion_Economia/" 
- # authors:
-  #- name: Dr. Madman
+  authors:
+  - name: Diego Lopez 
    # url: https://example.com
-  #- name: Dr. Lessmad
+  - name: Williams Gomez
    # url: https://example.com
 
   paper:
     summary: This data project presents the relevant information for the principal population variables (fertility and fecundity, mortality and nuptiality) for Mexico and their relationship with the economic cycle. 
           The project is presented as an interactive and friendly visualitation tool. <br /> With Diego Lopez and Williams Gomez.
     url: "https://diego-lopezt.shinyapps.io/Poblacion_Economia/" 
-  categories: ["academic"]
-  tags: ["R Programming", "Data", "Visualitation","Shiny app"]
+  categories: ["project"]
+  tags: ["Data","Shiny app", "R Programming"]
 
-- title: Master Thesis
+- title: Efectos del TLCAN en el Sector Agricola de México: Una aplicación del Método de Control Sintético
   publishedIn:
-    name: Link to 
+    name: Link
     date: 2021
     url: "https://repositorio.colmex.mx/concern/theses/2801pj26n?f%5Bcreator_sim%5D%5B%5D=Castillo+Espinosa%2C+Joel&f%5Blanguage_sim%5D%5B%5D=Español&f%5Bsubject_sim%5D%5B%5D=Libre+comercio&f%5Btype_of_illustrations_sim%5D%5B%5D=gráficas&locale=es/" 
  # authors:
@@ -57,8 +57,11 @@ publications:
           To estimate the effect, I apply the Synthetic Control Method (Abadie, 2003).
     url: "https://repositorio.colmex.mx/concern/theses/2801pj26n?f%5Bcreator_sim%5D%5B%5D=Castillo+Espinosa%2C+Joel&f%5Blanguage_sim%5D%5B%5D=Español&f%5Bsubject_sim%5D%5B%5D=Libre+comercio&f%5Btype_of_illustrations_sim%5D%5B%5D=gráficas&locale=es"
   categories: ["academic"]
-  tags: ["Econometrics"]
+  tags: ["Academic", "Econometrics"]
 
+
+
+  
 
 
   
