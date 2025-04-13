@@ -41,7 +41,7 @@ publications:
   categories: ["project"]
   tags: ["Data","Shiny app", "R Programming"]
 
-- title: Efectos del TLCAN en el Sector Agricola de México: Una aplicación del Método de Control Sintético
+- title: "Efectos del TLCAN en el Sector Agricola de México: Una aplicación del Método de Control Sintético"
   publishedIn:
     name: Link
     date: 2021
