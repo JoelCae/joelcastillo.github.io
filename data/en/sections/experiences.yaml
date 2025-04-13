@@ -18,7 +18,7 @@ experiences:
     # Can optionally show a different logo for dark theme
     darkLogo: /images/sections/experiences/banxico_white.png
     # company overview
-    overview: Banxico is the Central Bank of Mexico.
+    overview: Banxico is the Central Bank of Mexico. The main objective of Banxico is to maintain a low and stable inflation.
   positions:
   - designation: Economist
     start: Sept 2022
