@@ -33,6 +33,13 @@ projects:
   url: "https://www.stata.com"
   tags: ["software", "programming"]
 
+- name: GitHub
+  logo: /images/sections/skills/github.svg
+  summary: "Experienced in deploying static websites and project portfolios using GitHub Pages. Proficient in version control, repository management, and team collaboration."
+  url: "https://www.github.com"
+  tags: ["software", "programming"]
+
+
 #- name: Python
  # logo: /images/sections/skills/cloud.png
  # summary: "Experienced in Python, specializing in data analysis, automation, and machine learning. Proficient in using libraries like Pandas, NumPy, and Matplotlib for data manipulation and visualization, as well as Scikit-learn and TensorFlow for developing predictive models. Skilled in writing efficient scripts for automating workflows and ensuring reproducibility in research."
@@ -47,22 +54,22 @@ projects:
 
 - name: LaTex
   logo: /images/sections/skills/overleaflogo.png
-  summary: "Proficient in LaTeX for creating professionally formatted documents, including academic papers, reports, and presentations. Skilled in using LaTeX for complex mathematical typesetting, bibliography management, and document customization."
+  summary: "Proficient in LaTeX for creating professionally formatted documents, including academic papers, reports, and presentations."
   tags: ["software", "programming"]
 
 - name: MS Office
   logo: /images/sections/skills/MSlogo.png
-  summary: "Proficient in Microsoft Office, with advanced skills in Excel for data analysis, modeling, and automation using functions. Experienced in creating professional documents in Word. Skilled in designing presentations in PowerPoint."
+  summary: "Proficient in Microsoft Office, with advanced skills in Excel for data analysis, modeling, and automation using functions."
   tags: ["software"]
 
 - name: Applied Economics
   logo: /images/sections/skills/cloud.png
-  summary: "Skilled in applied economics, with a strong background in using economic theories and quantitative methods to analyze real-world issues. Experienced in interpreting economic data and applying econometric techniques to inform decision-making and solve practical economic problems."
+  summary: "Skilled in applied economics, with a strong background in using economic theories and quantitative methods to analyze real-world issues. Proficient in using statistical methods and tools to extract meaningful insights."
   tags: ["economics"]
 
 - name: Data Analysis
   logo: /images/sections/skills/cloud.png
-  summary: "Experienced in data analysis, with strong skills in cleaning, transforming, and interpreting complex datasets. Proficient in using statistical methods and tools to extract meaningful insights, identify trends, and support data-driven decision-making. Capable of visualizing data effectively to communicate findings clearly."
+  summary: "Experienced in data analysis, with strong skills in cleaning, transforming, and managing complex datasets. Capable of visualizing data effectively to communicate findings clearly."
   tags: ["data", "economics"]
 
 #- name: GiHub
