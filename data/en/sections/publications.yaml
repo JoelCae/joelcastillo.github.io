@@ -28,10 +28,10 @@ publications:
     name: Link to Shiny app
     date: 2020
     url: "https://diego-lopezt.shinyapps.io/Poblacion_Economia/" 
-  authors:
-  - name: Diego Lopez 
+  #authors:
+  #- name: Diego Lopez 
    # url: https://example.com
-  - name: Williams Gomez
+  #- name: Williams Gomez
    # url: https://example.com
 
   paper:
