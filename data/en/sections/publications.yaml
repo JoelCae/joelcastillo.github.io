@@ -23,6 +23,23 @@ buttons:
 # your publications
 publications:
 
+- title: LeetCode 75
+  publishedIn:
+    name: GitHub page
+    date: 2025
+    url: "https://joelcae.github.io/leetcode-75/" 
+  #authors:
+  #- name: Diego Lopez 
+   # url: https://example.com
+  #- name: Williams Gomez
+   # url: https://example.com
+
+  paper:
+    summary: This project presents the coding problems and my solutions that are part of LeetCode 75 study plan. I developed a github page to present the project.
+    url: "https://joelcae.github.io/leetcode-75/" 
+  categories: ["project"]
+  tags: ["Github page", "Programming"]
+
 - title: Population and Economy (Shiny app)
   publishedIn:
     name: Link to Shiny app
