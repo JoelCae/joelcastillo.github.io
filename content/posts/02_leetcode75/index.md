@@ -59,11 +59,20 @@ The plan study is struturated in the next topics :
 All solutions are programmed in R, and I use Rmarkdown to manage the MD files to present the problems in a comprehensive way.
 
 If you have any questions or suggestions, I’d be grateful to receive your message. 
-
 ### Array / String
-- [01 Merge Strings Alternately](https://joelcae.github.io/leetcode-75/posts/01_1768_Merge_Strings_Alternately)
-- [02 Greatest Common Divisor of Strings](https://joelcae.github.io/leetcode-75/posts/02_1071_Greatest_Common_Divisor_of_Strings)
-- [03 Kids With the Greatest Number of Candies](https://joelcae.github.io/leetcode-75/posts/03_1431_Kids_With_the_Greatest_Number_of_Candies)
-- [04 Can Place Flowers](https://joelcae.github.io/leetcode-75/posts/04_650_Can_Place_Flowers)
-- [05 Reverse Vowels of a String](https://joelcae.github.io/leetcode-75/posts/05_345_Reverse_Vowels_of_a_String)
-- [06 Reverse Words in a String](https://joelcae.github.io/leetcode-75/posts/06_151_Reverse_Words_in_a_String)
+- [01 Merge Strings Alternately](https://joelcae.github.io/leetcode-75/posts/01_1768_Merge_Strings_Alternately.md)
+- [02 Greatest Common Divisor of Strings](https://joelcae.github.io/leetcode-75/posts/02_1071_Greatest_Common_Divisor_of_Strings.md)
+- [03 Kids With the Greatest Number of Candies](https://joelcae.github.io/leetcode-75/posts/03_1431_Kids_With_the_Greatest_Number_of_Candies.md)
+- [04 Can Place Flowers](https://joelcae.github.io/leetcode-75/posts/04_650_Can_Place_Flowers.md)
+- [05 Reverse Vowels of a String](https://joelcae.github.io/leetcode-75/posts/05_345_Reverse_Vowels_of_a_String.md)
+- [06 Reverse Words in a String](https://joelcae.github.io/leetcode-75/posts/06_151_Reverse_Words_in_a_String.md)
+- [07 Product of Array Except Self](https://joelcae.github.io/leetcode-75/posts/07_238_Product_of_Array_Except_Self.md)
+- [08 Increasing Triplet Subsequence](https://joelcae.github.io/leetcode-75/posts/08_334_Increasing_Triplet_Subsequence.md)
+- [09 String Compression](https://joelcae.github.io/leetcode-75/posts/09_443_String_Compression.md)
+
+### Two Pointers
+- [10 Move Zeroes](https://joelcae.github.io/leetcode-75/posts/10_283_Move_Zeroes.md)
+- [11 Is Subsequence](https://joelcae.github.io/leetcode-75/posts/11_392_Is_Subsequence.md)
+- [12 Container With Most Water](https://joelcae.github.io/leetcode-75/posts/12_11_Container_With_Most_Water.md)
+- [13 Max Number of K-Sum Pairs](https://joelcae.github.io/leetcode-75/posts/13_1679_Max_Number_of_KSum_Pairs.md)
+
