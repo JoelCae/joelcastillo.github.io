@@ -4,7 +4,7 @@ date: 2025-07-19 20:00:00
 description: Análisis de datos del MMCDMX 2025
 menu:
   sidebar:
-    name: Análisis de datos del MMCDMX 2025
+    name: Datos del MMCDMX 2025
     identifier: MMCDMX2025
     weight: 30
 tags: ["Programmig", "R", "Data"]
@@ -461,7 +461,7 @@ htmlwidgets::saveWidget(plot, "html/plot.html",
 #plot
 ```
 
-<a href="https://joelcae.github.io/analisis-mmcdmx2025/html/plot.html">Ver
+<a href="https://joelcae.github.io/analisis-mmcdmx2025/html/plot.html" target="_blank">Ver
 el Gráfico 3 en interactivo</a>
 
 <a href="https://joelcae.github.io/analisis-mmcdmx2025/html/plot.html" target="_blank"><img src="html/plot.png">
