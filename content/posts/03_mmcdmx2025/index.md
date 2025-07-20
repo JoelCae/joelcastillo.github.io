@@ -1,18 +1,31 @@
-
+---
+title: "Análisis de datos del MMCDMX 2025"
+date: 2025-07-19 20:00:00
+description: Análisis de datos del MMCDMX 2025
+menu:
+  sidebar:
+    name: Análisis de datos del MMCDMX 2025
+    identifier: MMCDMX2025
+    weight: 30
+tags: ["Programmig", "R", "Data"]
+categories: ["Programmig"]
+---
 ## OBTENCIÓN DE LOS DATOS
 
-Para la obtención de todos los datos de los participantes del MMCDMX
-2025 se realizó un web scraping dentro de la pagina oficial de
-resultados de Márcate (<https://www.marcate.com.mx/resultados>), cabe
-aclarar que todos los resultados son públicos. Dicha extracción se
-realizó el día 15 de Julio de 2025, cualquier modificación o adición no
-se verá reflejada en este análisis. Para cuidar información personal,
-este análisis se centra en resultados agregados y no individuales.
+Para la obtención de todos los datos de los participantes del Medio
+Maratón de la Ciudad de México 2025 (MMCDMX 2025) se realizó un web
+scraping dentro de la pagina oficial de resultados de Márcate
+(<https://www.marcate.com.mx/resultados>), cabe aclarar que todos los
+resultados son públicos. Dicha extracción se realizó el día 15 de Julio
+de 2025, cualquier modificación o adición posterior no se verá reflejada
+en este análisis. Para cuidar información personal, este análisis se
+centra en resultados agregados y no individuales.
 
 ## LIMPIEZA DE LOS DATOS
 
-Primero cargamos los datos del web scraping. De aquí se obtiene que se
-tiene un total de 29641 números de participantes.
+Se cargan los datos del web scraping. La base contiene registros para un
+total de 29641 números de participantes, con un agregado de 24
+variables.
 
 ``` r
 # leer datos
@@ -24,13 +37,30 @@ total_folios
 
     ## [1] 29641
 
+``` r
+names(data_MMCDMX205_intervalos)
+```
+
+    ##  [1] "nombre"                    "carreraId"                
+    ##  [3] "carrera"                   "distancia"                
+    ##  [5] "categoria"                 "rama"                     
+    ##  [7] "posicion"                  "posicion_cuenta"          
+    ##  [9] "numero"                    "equipo"                   
+    ## [11] "estimado"                  "guntime"                  
+    ## [13] "tiempoChip"                "pace"                     
+    ## [15] "paso"                      "posicionRama"             
+    ## [17] "posicionRama_cuantos"      "posicionCategoria"        
+    ## [19] "posicionCategoria_cuantos" "Intermedios.nombre"       
+    ## [21] "Intermedios.tiempo"        "segundosGuntime"          
+    ## [23] "segundosFoto1"             "segundosFoto2"
+
 Sin embargo, no todos estos números tienen participación en el medio
 maratón, fueron un total de 2564 folios que no cuentan con tiempo
 oficial y que se pueden catalogar como que no realizaron la carrera.
 Quedando un total de 27077 participantes en la carrera.
 
 ``` r
-# solo números con tiempo (personas que si iniciaron o tienen tiempo)
+# solo números con tiempo, personas que si iniciaron (cuentan con tienen tiempo)
 data_filter <- data_MMCDMX205_intervalos %>%
   filter(segundosGuntime  > 0 )
 
@@ -41,21 +71,21 @@ total_noparticipa
 
     ## [1] 2564
 
-Este tipo de carreras cuentan con puntos de control a lo largo del
-recorrido, para el caso especifico de esta media maratón se colocaron un
-total de 4 puntos de control en los kilómetros 5, 10, 15 y 20, dichos
-puntos sirven como marcas intermedias que nos pueden apoyar al análisis
-de la información.
+Es importante señalar que este tipo de carreras cuentan con puntos de
+control a lo largo del recorrido, para el caso especifico de esta media
+maratón se colocaron un total de 4 puntos de control en los kilómetros
+5, 10, 15 y 20, dichos puntos sirven como marcas intermedias que nos
+pueden apoyar al análisis de la información.
 
 Con el fin de contar con datos más limpios se ha decidido omitir del
 análisis aquellos números que no cuenten con todos los registros de
 estos puntos de control. La Tabla 1, muestra el total de registros por
 punto de control, el cual va disminuyendo a medida que avanza los
-kilómetros, llegando hasta un 2% de todos los participantes que no
-cuentan con registro en el último punto de control.
+kilómetros de la carrera, llegando hasta un 2% de todos los
+participantes que no cuentan con registro en el último punto de control.
 
 ``` r
-# tabla de los registors en cada punto de control 
+# tabla de los registros en cada punto de control 
 total_inter <- as.data.frame(table(data_filter$Intermedios.nombre))
 # ordenar
 total_inter <- arrange(total_inter, -Freq)
@@ -98,8 +128,8 @@ total_filtro <- length(unique(data_filter$numero))
 Continuando con la limpieza de datos, aunque con menos casos dentro de
 la base, se han revisado que los tiempos intermedios sean crecientes,
 esto quiere decir que el corredor pasó en el orden correcto los puntos
-de control. Una vez eliminados los 3 números que presentan discrepancia
-en este concepto se tiene un total de 25960 participantes.
+de control. Una vez eliminados los números que presentan discrepancia,
+solo son 3, se tiene un total de 25960 participantes.
 
 ``` r
 # revisar que los intervalos sean crecientes
@@ -130,6 +160,7 @@ intermedios deben ser menor al tiempo total.
 data_filter$check_guntime <- as.numeric(data_filter$guntime- data_filter$Intermedios.tiempo)
 data_filter$check_chiptime <-as.numeric(data_filter$tiempoChip - data_filter$Intermedios.tiempo) 
 
+# check
 summary(data_filter$check_guntime)
 ```
 
@@ -143,9 +174,9 @@ summary(data_filter$check_chiptime )
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
     ##     202    2958    4851    5131    6988   13815
 
-Se observa una discrepancia entre los tiempos de “guntime”, dado que
-vamos a hacer uso de esta variable, se filtran estos corredores con
-errores en sus registros.
+Se observa una discrepancia entre los tiempos de “guntime”, dado que se
+va a hacer uso de esta variable, se filtran estos corredores con errores
+en sus registros, aunque solo es 1 caso.
 
 ``` r
 # borrar negativos (tiempo intermedio > tiempo total)
@@ -165,9 +196,12 @@ total_errortiempos
 total_filtro <- length(unique(data_filter$numero))
 ```
 
+Terminada la fase de limpieza de datos, la base final cuenta con un
+total de 25959 números de participantes, con un total de 24 variables.
+
 ## ANÁLISIS DE LOS DATOS
 
-### Distribución población del MMCDMX 2025
+### Distribución poblacional del MMCDMX 2025
 
 Se obtiene el total de participares por categoría, estos son dividios
 por edad y genero.
@@ -193,24 +227,33 @@ for (i in 3:18) {
  data_resume_totales$cat[i] <-  data_resume_totales$cat[[i]][2]
 }
 
-# borra espacios
+# borrar espacios
 data_resume_totales$cat <- sub("^\\s+|\\s+$", "", data_resume_totales$cat)
+
+# totales por género
+totales_gen <- data_resume_totales %>%
+  group_by(genero) %>%
+  summarise(total = sum(n))
 ```
+
+De todos los participantes de la carrera, se encuentra que el agregado
+de mujeres dentro del MMCDMX 2025 fue de 11940, el resto, 14019, son
+hombres.
 
 El Gráfico 1. muestra la distribución de corredores por genero y edad,
 donde se observa que la categoría con más corredores en ambos géneros
-fue de 18 a 34 años. Tanto en hombres como en mujeres se nota una
+fue de 18 a 34 años. Tanto en mujeres como en hombres se aprecia una
 disminución en el número de corredores a medida que aumenta la edad de
 la categoría.
 
 ``` r
-# gráfico
-ggplot(data_resume_totales, aes(x = cat, y = n, fill = genero)) +
+# gráfico 1
+ggplot(data_resume_totales, aes(x = cat, y = n, fill = genero, col = genero)) +
   geom_col(data = subset(data_resume_totales, genero == "Hombres") %>% 
-             mutate(n = -n), width = 0.5, alpha = 0.5, col = "black") +
+             mutate(n = -n), width = 0.5, alpha = 0.5, linewidth=0.5) +
   geom_col(data = subset(data_resume_totales, genero == "Mujeres"),
-           width = 0.5, alpha = 0.5, col = "black") +
-  labs( x = "Categoría", y = "Corredores", fill = "Género",
+           width = 0.5, alpha = 0.5, linewidth=0.5) +
+  labs( x = "Categoría", y = "Total de corredores", fill = "Género", col = "Género",
     title = "Gráfico 1. Corredores por categoría y género en el MMCDMX 2025") +
   coord_flip() +
   scale_y_continuous(
@@ -221,7 +264,7 @@ ggplot(data_resume_totales, aes(x = cat, y = n, fill = genero)) +
     plot.margin = unit(c(.5, .5, .5, .5), "cm"))
 ```
 
-![](analisis_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](analisis_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ### Ritmos del MMCDMX 2025
 
@@ -239,7 +282,7 @@ data_filter$segundos_chiptime <- as.numeric(data_filter$guntime)
 data_filter$segundos_pace <- data_filter$segundos_chiptime/21.097
 ```
 
-Se obtiene el pace para cada categoria y género.
+Se obtiene el pace para cada categoría y género.
 
 ``` r
 # agregar los datos por categoría
@@ -255,11 +298,11 @@ data_resume <- data_filter %>%
 # redondear tiempos
 data_resume[,2:4] <- round(data_resume[,2:4])
 
-# para contrucción del pace
+# para construcción del pace
 minutes <- data_resume[,2:4] %/% 60
 seconds <- data_resume[,2:4] %% 60
 
-#pace con formato mm:ss
+# pace con formato mm:ss
 for (i in 1:3) {
   data_resume[,1 + i] <-  sprintf("%d:%02d", minutes[,i], seconds[,i])  
 }
@@ -324,57 +367,173 @@ Tabla 3. Resumen de ritmos por categoría varonil
 
 ### Distribución de tiempos oficiales
 
+Se obtiene la base con los registros de tiempo de carrera y se
+identifica el género del corredor.
+
 ``` r
+# registros únicos por corredor
 data_tiempos <- data_filter %>%
   distinct(numero, .keep_all = TRUE)
 
 data_tiempos$genero <- ifelse(grepl("Femenil", data_tiempos$categoria) == TRUE, 
                                      "Mujeres", "Hombres")
+
+# estadísticos del tiempo de carrera
+medias<- data_tiempos %>% 
+  group_by(genero) %>%
+  summarise(tiempo_media = mean(guntime), 
+            tiempo_mediana = median(guntime))
+# para labels
+medias$tiempo_media_lab <-  as.character(hms::as_hms(round(medias$tiempo_media)))
+medias$tiempo_mediana_lab <-  as.character(hms::as_hms(round(medias$tiempo_mediana)))
 ```
 
+El Gráfico 2, muestra la distribución de los tiempos de carrera por
+género, se observa que la distribución para los hombres cuenta con
+menores tiempos, quienes en promedio terminaron el medio maratón en
+02H:08M:44S, el tiempo medio de carrera de las mujeres fue 02H:22M:18S.
+
 ``` r
+# gráfico 2
 ggplot(data_tiempos) +
-  geom_histogram(aes(x = guntime , fill = genero), 
-                col = "black",  position = "identity", alpha = 0.5,
-                breaks = seq(3600, 3600*4.5, by =600)) +
-  labs(x = "Tiempo (hh:mm:ss)", y = "Frecuencia", fill = "Género",
+  geom_histogram(aes(x = guntime, fill = genero, col= genero), 
+                 position = "identity", alpha = 0.5,
+                 breaks = seq(3600, 3600*4.5, by = 600),
+                 linewidth=0.5) +  
+  geom_vline(data = medias, 
+             aes(xintercept = tiempo_media,col= genero), 
+             linetype="dashed", linewidth=1.2, show.legend = F) +
+  geom_text(data = medias, aes(x = 11500, y = c(2400,2200)), col = c("#fb8072", "#8dd3c7"),
+             label = paste("Media ", medias$genero, ":", medias$tiempo_media_lab, sep = ""),
+            size = 3.5) +
+  scale_color_manual( values = c("Hombres" = "#fb8072", "Mujeres" = "#8dd3c7")) +
+  scale_fill_manual(values = c("Hombres" = "#fb8072", "Mujeres" = "#8dd3c7")) +
+  labs(x = "Tiempo (hh:mm:ss)", y = "Frecuencia", col= "Género", fill = "Género",
        title = "Gráfico 2. Distribución de tiempos del MMCDMX 2025")+
   theme_minimal() +
   theme(plot.title = element_text(hjust = 0.3),
-    plot.margin = unit(c(.5, .5, .5, .5), "cm"))
+        plot.margin = unit(c(.5, .5, .5, .5), "cm"))
 ```
 
-![](analisis_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](analisis_files/figure-gfm/unnamed-chunk-17-1.png)<!-- --> Para un
+análisis más especifico de la distribución de tiempos podemos obtener
+los percentiles por género.
 
 ``` r
+# percentiles 
 data_quantil <- data_tiempos %>%
   group_by(genero) %>%
   summarise(quantiles = list(quantile(guntime, probs = seq(0.01,1,0.01)))) %>%
   unnest_longer(quantiles)
 
+# ajustes en variables
 data_quantil$quantiles_id <- gsub("%", "",data_quantil$quantiles_id )
 data_quantil$quantiles_id <- as.numeric(data_quantil$quantiles_id)
-
-data_quantil$quantiles_secs <- as.POSIXct( as.numeric(data_quantil$quantiles),  origin = "1970-01-01", tz = "UTC")
+data_quantil$quantiles_secs <- as.POSIXct( as.numeric(data_quantil$quantiles), 
+                                           origin = "1970-01-01", tz = "UTC")
 ```
 
-``` r
-ggplot(data_quantil) + 
-  geom_line(aes(x = quantiles, y = quantiles_id, colour = genero)) 
-```
+El Gráfico 3 (el cual se puede revisar de manera interactiva), muestra
+los percentiles de los tiempos de carrera por género, se observa que un
+40% de los hombres corrió por debajo de 02H:00M:10S, muy cerca a lo que
+se conoce como sub-2 horas en el medio maratón. El 20% de las mujeres
+obtuvieron tiempos menores a 02H:00M:18S.
 
-![](analisis_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+La herramienta del Gráfico 3, en su versión interactiva, puede ser útil
+para cualquier persona que desee conocer cuál fue, o cuál sería, su
+rendimiento relativo dentro de su género, únicamente conociendo el
+tiempo de carrera para el medio maratón.
 
 ``` r
+# gráfico 3
 plot <- plot_ly( data_quantil, x = ~quantiles_secs,  y = ~quantiles_id,
   color = ~genero,
   type = 'scatter',
   mode = 'markers', colors = c("#fb8072", "#8dd3c7")) %>%
-  layout(xaxis = list(
-    title = "Tiempo (hh:mm:ss)", 
-     tickformat = "%H:%M:%S" ))
+  layout(title = list(text = " <b> Gráfico 3. Percentiles del tiempo de carrera por género <b>",
+                      y = 0.99, x = 0.5 ),
+         xaxis = list(title = "Tiempo (hh:mm:ss)",  tickformat = "%H:%M:%S" ), 
+         yaxis = list(title = "Percentil"), 
+        legend = list(title=list(text='Género')))
 
-htmlwidgets::saveWidget(plot, "html/plot.html")
+htmlwidgets::saveWidget(plot, "html/plot.html", 
+                        title = "G3. Percentiles tiempos MMCDMX 2025")
+#plot
 ```
 
-[![Gráfico](plot.png)](html/plot.html)
+<a href="https://joelcae.github.io/analisis-mmcdmx2025/html/plot.html">Ver
+el Gráfico 3 en interactivo</a>
+
+<a href="https://joelcae.github.io/analisis-mmcdmx2025/html/plot.html" target="_blank"><img src="html/plot.png">
+</a>
+
+### Evolución de carrera
+
+Finalmente, se puede conocer los tiempos promedio para los puntos de
+control y de meta del MMCDMX 2025.
+
+``` r
+# datos para los puntos de control
+data_inter <- data_filter %>%
+  group_by(Intermedios.nombre) %>%
+  summarise(t_min = min(Intermedios.tiempo), 
+            t_max = max(Intermedios.tiempo),
+            t_mean = mean(Intermedios.tiempo)) %>%
+  ungroup()
+
+# agregar datos de meta 
+data_inter <- rbind(data_inter, c(21.1, min(data_tiempos$guntime), 
+                    max(data_tiempos$guntime), mean(data_tiempos$guntime)))
+
+# corregir algunas variables 
+data_inter$Intermedios.nombre[4:5] <- c("05K", "21.1K")
+data_inter$km <- as.numeric(gsub("K", "", data_inter$Intermedios.nombre)) 
+
+# ordenar datos
+data_inter <- data_inter %>%
+  arrange(Intermedios.nombre) 
+
+# datos para gráfico
+data_inter$dif <- data_inter$t_mean - data_inter$t_min
+data_inter$t_min <- hms::as_hms(round(data_inter$t_min))
+data_inter$dif <- hms::as_hms(round(data_inter$dif))
+
+# data par gráfico
+data_long <- data_inter %>%
+  pivot_longer(cols = c( dif,t_min), names_to = "tipo", 
+               values_to = "tiempo")  %>%
+  mutate(tipo = recode(tipo, dif = "Diferencia del promedio" ,
+                       t_min = "Mínimo"))
+```
+
+El Gráfico 4, muestra el tiempo mínimo obtenido en cada parcial, así
+como la diferencia en tiempo que a una persona en promedio le toma
+llegar a ese mismo punto de control, mientras que el KM 5 la persona más
+rápida lo pasa en 13M:50S, una persona promedio lo realiza en 29M:46S,
+esto es una diferencia de 15M:56S.
+
+Estos datos resultan en que, el tiempo mínimo de carrera en el MMCDMX
+2025 fue de 01H:03M:21S. Para la persona promedio el tiempo de carrera
+promedio fue de 02H:14M:59S, esto es, una diferencia de 01H:11M:38S.
+
+``` r
+# gráfico 4
+ggplot(data_long, aes(x = km, y = tiempo, fill = tipo, col = tipo)) + 
+  geom_col(alpha = 0.5) +
+  geom_text(
+    aes(label = hms::as_hms(tiempo)),
+    position = position_stack(vjust = 0.5),
+    size = 3.2, col= "#5564eb",
+    angle = c(0,0,rep(90,8)), show.legend = F
+  ) +
+  scale_fill_manual(values = c("Diferencia del promedio" = "#fb8072", "Mínimo" = "#8dd3c7")) +
+  scale_y_continuous(breaks = hms::as_hms(seq(0,3600*2.5, 1200))) +
+  labs(x = "KM", y = "Tiempo (hh:mm:ss)",
+       title = "Gráfico 4. Tiempos por punto de control",
+       fill = NULL, col = NULL) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.3),
+        plot.margin = unit(c(.5, .5, .5, .5), "cm"))
+```
+
+![](analisis_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
