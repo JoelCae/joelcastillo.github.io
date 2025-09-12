@@ -27,3 +27,9 @@ openGraph:
   description: Portfolio and personal blog of Joel Castillo Espinosa.
   image: images/author/Joel_profile.png
   url: https://joelcastillo.netlify.app
+
+baseURL: "https://joelcastillo.netlify.app/"
+sitemap:
+  changefreq: monthly
+  priority: 0.5
+  filename: sitemap.xml
