@@ -36,3 +36,8 @@ command = "hugo mod tidy && hugo mod npm pack && npm install && hugo --gc --mini
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
