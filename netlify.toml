@@ -1,3 +1,5 @@
+baseURL = "https://joelcastillo.netlify.app/"
+
 [build]
 command = "hugo --gc --minify"
 publish = "public"
