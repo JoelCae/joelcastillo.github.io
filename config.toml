@@ -1,0 +1,8 @@
+baseURL = "https://joelcastillo.netlify.app/"
+languageCode = "en-us"
+title = "Joel Castillo Espinosa"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 1.0
+  filename = "sitemap.xml"
