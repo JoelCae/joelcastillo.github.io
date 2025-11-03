@@ -461,12 +461,6 @@ htmlwidgets::saveWidget(plot, "html/plot.html",
 #plot
 ```
 
-<a href="https://joelcae.github.io/analisis-mmcdmx2025/html/plot.html" target="_blank">Ver
-el Gráfico 3 en interactivo</a>
-
-<a href="https://joelcae.github.io/analisis-mmcdmx2025/html/plot.html" target="_blank"><img src="html/plot.png">
-</a>
-
 <iframe src="https://joelcae.github.io/analisis-mmcdmx2025/html/plot.html" width="100%" height="450"></iframe>
 
 ### Evolución de carrera
@@ -539,4 +533,5 @@ ggplot(data_long, aes(x = km, y = tiempo, fill = tipo, col = tipo)) +
 ```
 
 ![](analisis_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+
 
