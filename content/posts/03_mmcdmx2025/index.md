@@ -10,18 +10,19 @@ menu:
 tags: ["Programmig", "R", "Data"]
 categories: ["Programmig"]
 ---
-## OBTENCIÓN DE LOS DATOS
+## Obtención de datos
 
 Para la obtención de todos los datos de los participantes del Medio
 Maratón de la Ciudad de México 2025 (MMCDMX 2025) se realizó un web
-scraping dentro de la pagina oficial de resultados de Márcate
-(<https://www.marcate.com.mx/resultados>), cabe aclarar que todos los
-resultados son públicos. Dicha extracción se realizó el día 15 de Julio
-de 2025, cualquier modificación o adición posterior no se verá reflejada
-en este análisis. Para cuidar información personal, este análisis se
-centra en resultados agregados y no individuales.
+scraping dentro de la pagina oficial de resultados de
+<a href="https://www.marcate.com.mx/resultados"
+target="_blank">Márcate</a>, cabe aclarar que todos los resultados son
+públicos. Dicha extracción se realizó el día 15 de Julio de 2025,
+cualquier modificación o adición posterior no se verá reflejada en este
+análisis. Para cuidar información personal, este análisis se centra en
+resultados agregados y no individuales.
 
-## LIMPIEZA DE LOS DATOS
+## Limpieza de datos
 
 Se cargan los datos del web scraping. La base contiene registros para un
 total de 29641 números de participantes, con un agregado de 24
@@ -199,7 +200,7 @@ total_filtro <- length(unique(data_filter$numero))
 Terminada la fase de limpieza de datos, la base final cuenta con un
 total de 25959 números de participantes, con un total de 24 variables.
 
-## ANÁLISIS DE LOS DATOS
+## Análisis de datos
 
 ### Distribución poblacional del MMCDMX 2025
 
@@ -257,8 +258,8 @@ ggplot(data_resume_totales, aes(x = cat, y = n, fill = genero, col = genero)) +
     title = "Gráfico 1. Corredores por categoría y género en el MMCDMX 2025") +
   coord_flip() +
   scale_y_continuous(
-    breaks = c(seq(-7000, -1000, by = 1500), seq(0, 7000, by = 1000)),
-    labels = c(seq(-7000, -1000, by = 1500) * -1, seq(0, 7000, by = 1000)) ) +
+    breaks = c(seq(-8000,0, by = 2000), seq(0, 8000, by = 2000)),
+    labels = c(seq(-8000, 0, by = 2000) * -1, seq(0, 8000, by = 2000)) ) +
   theme_minimal() +
   theme(plot.title = element_text(hjust = 0.3),
     plot.margin = unit(c(.5, .5, .5, .5), "cm"))
@@ -457,11 +458,12 @@ plot <- plot_ly( data_quantil, x = ~quantiles_secs,  y = ~quantiles_id,
         legend = list(title=list(text='Género')))
 
 htmlwidgets::saveWidget(plot, "html/plot.html", 
-                        title = "G3. Percentiles tiempos MMCDMX 2025")
+                        title = "G3. Percentiles tiempos MMCDMX 2025",  selfcontained = TRUE)
 #plot
 ```
 
-<iframe src="https://joelcae.github.io/analisis-mmcdmx2025/html/plot.html" width="100%" height="450"></iframe>
+<iframe src="https://joelcae.github.io/analisis-mmcdmx2025/html/plot.html" width="100%" height="450">
+</iframe>
 
 ### Evolución de carrera
 
@@ -533,5 +535,3 @@ ggplot(data_long, aes(x = km, y = tiempo, fill = tipo, col = tipo)) +
 ```
 
 ![](analisis_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
-
-
