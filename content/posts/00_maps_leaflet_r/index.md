@@ -4,7 +4,7 @@ date: 2025-10-29 20:00:00
 description: Iteractive maps with Leaflet in R
 menu:
   sidebar:
-    name: Iteractive maps with Leaflet in R
+    name: Iteractive maps (Leaflet | R)
     identifier: maps_leaflet_r
     weight: 40
 tags: ["Programmig", "R", "Data"]
