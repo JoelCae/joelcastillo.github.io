@@ -535,3 +535,51 @@ ggplot(data_long, aes(x = km, y = tiempo, fill = tipo, col = tipo)) +
 ```
 
 ![](analisis_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+
+## Contact me
+
+<hr>
+<style>
+.socials {
+  text-align: center;
+  margin-top: 30px;
+  font-family: sans-serif;
+}
+.socials a {
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 20px;
+  color: #333;
+  position: relative;
+  font-weight: 500;
+}
+.socials a::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.socials a:hover::after {
+  opacity: 1;
+}
+</style>
+
+<div class="socials">
+
+<a href="https://joelcastillo.netlify.app" target="_blank" title="Website">Website</a>
+<a href="https://github.com/JoelCae" target="_blank" title="GitHub">GitHub</a>
+<a href="https://www.linkedin.com/in/joel-castillo-espinosa" target="_blank" title="LinkedIn">LinkedIn</a>
+
+</div>
+
+<hr>
+
