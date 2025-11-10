@@ -11,7 +11,7 @@ tags: ["Programmig", "R", "Data"]
 categories: ["Programmig"]
 ---
 
-# Overview
+## Overview
 
 An interactive map is a great tool to support spatial analysis. This
 project shows how to create an interactive map using the `leaflet`
@@ -20,7 +20,7 @@ spatial data, such as coordinates to add markers or polygons to delimit
 areas. Here, I present maps that shows the distribution of veterinary
 services in Mexico City.
 
-# Libraries
+## Libraries
 
 ``` r
 library(readr)
@@ -29,7 +29,7 @@ library(leaflet)
 library(sf)
 ```
 
-# Data
+## Data
 
 I use data from the National Statistical Directory of Economic Units
 (DENUE in spanish) of the National Institute of Statistics and Geography
@@ -45,7 +45,7 @@ For this project, I focus on veterinary services in the Mexico City. I
 use the exact locations provided by latitude and longitude, as well as
 the name of establishments.
 
-## Manage data
+### Manage data
 
 Read the data from DENUE. This file contains all establishments in
 Mexico City.
@@ -107,7 +107,7 @@ head(data_vet_mun)
     ## 5 Cuauhtémoc                  130
     ## 6 Gustavo A. Madero           286
 
-## Polygons
+### Polygons
 
 Read the shapefile with the municipality polygons. You can download the
 polygons from <a
@@ -159,7 +159,7 @@ head(mun_sf)
     ## 5 POLYGON ((-99.25738 19.4011... -99.31094 19.32431
     ## 6 POLYGON ((-99.12951 19.4626... -99.14906 19.43137
 
-# Interactive maps with Leaflet
+## Interactive maps with Leaflet
 
 The first map shows the total number of veterinary services by
 municipality in Mexico City. Below, I explain how the code works:
@@ -258,7 +258,7 @@ htmlwidgets::saveWidget(map3, "html/map_03.html",
 <iframe src="https://joelcae.github.io/interactive_maps_leaflet_r/html/map_03.html" width="100%" height="450">
 </iframe>
 
-# Contact me
+## Contact me
 
 <hr>
 <style>
