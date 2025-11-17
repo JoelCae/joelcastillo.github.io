@@ -175,8 +175,9 @@ municipality in Mexico City. Below, I explain how the code works:
 - `addCircles()` adds the circles to the map. Each circle is centered on
   a municipality using the previously calculated centroid, and its
   radius represents the total number of veterinary services in the
-  municipality. `popup = ~paste0(NOMGEO, ": ", total_vet)` works like
-  the polygon pop-up but adds the total number of veterinary services.
+  municipality. `label = ~paste0(NOMGEO, ": ", total_vet)` adds a label
+  that shows the municipality name and the total number of veterinary
+  services.
 
 - `addControl()` places the map title in the top-right corner.
 
@@ -185,10 +186,10 @@ map1 <- leaflet(mun_sf) %>%
   addProviderTiles(providers$CartoDB.Positron) %>%
   addPolygons( color = "darkblue", weight = 2,  opacity = 0.5,
     fillColor = "white", fillOpacity = 0.5,
-    popup = ~ NOMGEO) %>%
+     popup = ~NOMGEO) %>%
   addCircles(lng = ~lon, lat = ~lat,radius = ~total_vet*10,      
     color = "white",fillColor = "blue",fillOpacity = 0.8,
-    popup = ~paste0(NOMGEO, ": ", total_vet) ) %>%
+    label = ~paste0(NOMGEO, ": ", total_vet) ) %>%
   addControl(html = "<div style='text-align: center; font-size: 16px;'> <b> Total of veterinary Services in Mexico City </b> </div>", position = "topright" ) 
 
 #map1 
